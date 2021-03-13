@@ -1,11 +1,12 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class SecurityCamera : MonoBehaviour
 {
-    [SerializeField] private Transform targetTransform;
-
-    private void Update()
+    public Transform target;
+    void Update()
     {
-        transform.LookAt(targetTransform);
+        transform.LookAt(target);
     }
 }
