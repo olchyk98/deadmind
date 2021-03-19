@@ -6,10 +6,6 @@ namespace Player.Input
 {
     public class InputActionHandler : MonoBehaviour
     {
-        [SerializeField] private float movementSpeed;
-        [SerializeField] private float povSpeed;
-        [SerializeField] private float jumpHeight;
-        
         public UnityAction<Vector3> OnMove;
         public UnityAction<Vector3> OnRotate;
 
@@ -22,9 +18,9 @@ namespace Player.Input
 
         private void HandleMovementTick()
         {
-            float y = UInput.GetAxisRaw("Vertical") * movementSpeed;
-            float z = UInput.GetAxisRaw("Horizontal") * movementSpeed;
-            float x = UInput.GetAxis("Jump") * jumpHeight;
+            float y = UInput.GetAxisRaw("Vertical");
+            float z = UInput.GetAxisRaw("Horizontal");
+            float x = UInput.GetAxis("Jump");
             x *= Time.fixedDeltaTime;
             y *= Time.fixedDeltaTime;
             z *= Time.fixedDeltaTime;
@@ -33,7 +29,7 @@ namespace Player.Input
 
         private void HandleRotationTick()
         {
-            var v = new Vector3(UInput.GetAxis("Mouse Y"), UInput.GetAxis("Mouse X"), 0) * (Time.deltaTime * povSpeed);
+            var v = new Vector3(UInput.GetAxis("Mouse Y"), UInput.GetAxis("Mouse X"), 0) * Time.fixedDeltaTime;
             OnRotate?.Invoke(v);
         }
     }
