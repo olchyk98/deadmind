@@ -1,4 +1,6 @@
-﻿using Player;
+using Player;
+using System;
+using Player;
 using UnityEngine;
 
 [RequireComponent(typeof(InputActionHandler))]
@@ -31,6 +33,7 @@ public class Movement : MonoBehaviour
         {
             Jump(jumping);
         }
+
     }
 
     private void Jump(float input)
