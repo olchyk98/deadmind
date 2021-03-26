@@ -15,22 +15,19 @@ namespace Player
         {
             _transform = GetComponent<Transform>();
             _input = GetComponent<InputActionHandler>();
+
+            _input.OnRotate += HandleLookTick;
+
+            Cursor.lockState = CursorLockMode.Locked;
         }
 
-        private void Update()
+        private void HandleLookTick (Vector2 direction)
         {
-            HandleLookTick();
-        }
-
-        private void HandleLookTick ()
-        {
-            var mouseDirection = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
-
             var horizontalRotation = _transform.rotation.eulerAngles;
-            var nextY = _rotationY - mouseDirection.y * _mouseSensitivity;
+            var nextY = _rotationY - direction.y * _mouseSensitivity;
 
             _rotationY = Mathf.Clamp(nextY, -90f, 90f);
-            horizontalRotation.y += mouseDirection.x * _mouseSensitivity;
+            horizontalRotation.y += direction.x * _mouseSensitivity;
 
             // Apply rotation changes
             _cameraTransform.localRotation = Quaternion.Euler(_rotationY, 0f, 0f);

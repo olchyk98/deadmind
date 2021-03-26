@@ -7,7 +7,7 @@ namespace Player
     public class InputActionHandler : MonoBehaviour
     {
         public UnityAction<Vector3> OnMove;
-        public UnityAction<Vector3> OnRotate;
+        public UnityAction<Vector2> OnRotate;
 
         // Update is called once per frame
         private void FixedUpdate()
@@ -29,8 +29,11 @@ namespace Player
 
         private void HandleRotationTick()
         {
-            var v = new Vector3(UInput.GetAxis("Mouse Y"), UInput.GetAxis("Mouse X"), 0) * Time.fixedDeltaTime;
-            OnRotate?.Invoke(v);
+            var direction = new Vector2(
+                UInput.GetAxis("Mouse X"),
+                UInput.GetAxis("Mouse Y")
+            );
+            OnRotate?.Invoke(direction);
         }
     }
 }
