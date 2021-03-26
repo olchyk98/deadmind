@@ -18,11 +18,10 @@ namespace Player
 
         private void HandleMovementTick()
         {
-            float y = UInput.GetAxisRaw("Vertical");
+            float x = UInput.GetAxisRaw("Vertical");
             float z = UInput.GetAxisRaw("Horizontal");
-            float x = UInput.GetAxis("Jump");
+            float y = UInput.GetAxis("Jump");
             x *= Time.fixedDeltaTime;
-            y *= Time.fixedDeltaTime;
             z *= Time.fixedDeltaTime;
             OnMove?.Invoke(new Vector3(x, y, z));
         }
