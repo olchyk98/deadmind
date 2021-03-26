@@ -1,5 +1,4 @@
-﻿using System;
-using Player;
+﻿using Player;
 using UnityEngine;
 
 [RequireComponent(typeof(InputActionHandler))]
@@ -34,7 +33,12 @@ public class Movement : MonoBehaviour
         }
     }
 
-    private void Jump(float input) => rb.AddForce(Vector3.up * (jumpHeight * input), ForceMode.Impulse);
+    private void Jump(float input)
+    {
+        rb.AddForce(Vector3.up * (jumpHeight * input), ForceMode.Impulse);
+    }
+
+   
 
     private void OnCollisionEnter(Collision other)
     {
