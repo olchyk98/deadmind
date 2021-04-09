@@ -1,4 +1,4 @@
-﻿using Player;
+using Player;
 using UnityEngine;
 
 [RequireComponent(typeof(InputActionHandler))]
