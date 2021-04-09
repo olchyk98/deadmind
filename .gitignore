@@ -21,6 +21,7 @@
 
 # IDEs cache directories
 .vs/
+.vsconfig
 .idea
 .DS_Store
 
