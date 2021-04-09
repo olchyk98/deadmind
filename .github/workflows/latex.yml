@@ -22,12 +22,13 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: manual/main.tex
+          working_directory: manual/
+          root_file: main.tex
 
       # Uploads compiled PDF
       - name: Run a multi-line script
         uses: actions/upload-artifact@v2
         with:
           name: Manual
-          path: main.pdf
+          path: manual/main.pdf
 
