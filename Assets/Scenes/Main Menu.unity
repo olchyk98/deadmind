@@ -609,4 +609,4 @@ MonoBehaviour:
   - Oles
   - Tristan
   - Marko
-  textPrefab: {fileID: 2657492867366005309, guid: b7c09493749120040a69e39564a7286a, type: 3}
+  TextPrefab: {fileID: 2657492867366005309, guid: b7c09493749120040a69e39564a7286a, type: 3}
