@@ -1,7 +1,11 @@
 \documentclass{article}
 \usepackage[pages=some]{background}
+\usepackage{eso-pic}
+\usepackage{transparent}
 \usepackage[utf8]{inputenc}
 \usepackage[russian]{babel}
+\usepackage{soul}
+
 
 \title{Deadmind Manual}
 \date{Version 0.0.1}
@@ -24,6 +28,50 @@ contents={%
 What follows is the operators manual for bomb defusal containing all the knowledge we've learned fighting terror in our great country. We'd like to remind the operator that sharing this manual is grounds for capital treason. Under \textbf{NO} circumstances shall you render any part of the material visible to a third-party or we will prosecute you fully to the extent that the law allows us.
 
 Thank you \& слава россии!
+
+\newpage
+\BgThispage
+
+
+\AddToShipoutPicture*{
+    \put(0,50){
+        \parbox[b][\paperheight]{\paperwidth}{%
+            \vfill
+            \centering
+            {
+                \transparent{0.92}\includegraphics[width=280pt,height=180pt]{b.png}
+            }%
+            \vfill
+        }
+    }
+}
+
+\section* {Simon Says}
+
+Simon Says is the classic game where the field agents get the information, and they repeat it to you the operator. With a fun twist, get it wrong \st{you'll regret it}.\\
+
+The field agents will phone back to base with a flashing color and a word, you can use these to relay back information to deactivate the device
+
+
+
+\begin{center}
+\begin{tabular}{ |p{3cm}||p{3cm}|p{3cm}|p{3cm}|  }
+ \hline
+ \multicolumn{4}{|c|}{Defuser} \\
+ \hline
+ Flashing Color -- Word& Red & Green & Blue\\
+ \hline
+ Space   & aaaaa    &bbbbb&   ccccc\\
+ \hline
+\end{tabular}
+\end{center}
+
+\newpage
+\BgThispage
+\section* {Symbols}
+Frankly we can't afford field agents who have the education to understand roman numerals, good thing we have you operator! Field agents may encounter a numberpad device that shows a symbol, and they will have to try their best to describe it back to you over the line. Using their description you will deduce what numbers they should be pressing.
+
+
 
 \end{document}
 
