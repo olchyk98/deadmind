@@ -4,26 +4,28 @@ using UnityEngine;
 using TMPro;
 public class PlayerSideInteractable : MonoBehaviour
 {
-    [SerializeField] private Camera _camera;
-    [SerializeField] private TextMeshProUGUI _interactText;
-    private void Update()
+    [SerializeField]
+    Transform cameraTransform;
+    [SerializeField]
+    TextMeshProUGUI interactText;
+    RaycastHit? raycastHit;
+    void Update()
     {
-        Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
-
-        Physics.Raycast(ray, out var hit, 10f);
-        Interactable interactable = hit.collider?.gameObject.GetComponent<Interactable>();
-
+        Ray ray = new Ray(cameraTransform.position, cameraTransform.forward);
+        Physics.Raycast(ray, out var hit, 5);
+        raycastHit = hit;
+        Interactable interactable = raycastHit?.collider?.gameObject?.GetComponent<Interactable>();
         if (interactable != null)
         {
-            _interactText.text = interactable.interactText;
+            interactText.text = interactable.interactText;
             if(Input.GetKeyDown(KeyCode.E))
             {
                 interactable.Hit();
             }
-
-            return;
         }
-
-        _interactText.text = "";
+        else
+        {
+            interactText.text = "";
+        }
     }
 }
