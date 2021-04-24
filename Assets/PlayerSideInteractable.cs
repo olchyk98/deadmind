@@ -18,7 +18,10 @@ public class PlayerSideInteractable : MonoBehaviour
         if (interactable != null)
         {
             interactText.text = interactable.interactText;
-            interactable.Hit();
+            if(Input.GetKeyDown(KeyCode.E))
+            {
+                interactable.Hit();
+            }
         }
         else
         {

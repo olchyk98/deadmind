@@ -16,9 +16,7 @@ public class Interactable : MonoBehaviour
     }
     public void Hit()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            interactEvent.Invoke();
-        }
+
+         interactEvent.Invoke();
     }
 }
