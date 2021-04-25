@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using UnityEditor.Animations;
 using UnityEngine;
 
-public class Door : MonoBehaviour
+public class Door : Interactable
 {
     Animator animator;
     void Start()
     {
+        OnInteract += ToggleState;
         animator = GetComponent<Animator>();
     }
     public void ToggleState()
     {
-            animator.SetBool("isOpen", !animator.GetBool("isOpen"));
+        animator.SetBool("isOpen", !animator.GetBool("isOpen"));
     }
 }

@@ -7,16 +7,9 @@ using UnityEngine.Events;
 public class Interactable : MonoBehaviour
 {
     public string interactText;
-    Collider objectCollider;
-    [SerializeField]
-    UnityEvent interactEvent;
-    private void Start()
+    public UnityAction OnInteract;
+    public virtual void Hit()
     {
-        objectCollider = GetComponent<Collider>();
-    }
-    public void Hit()
-    {
-
-         interactEvent.Invoke();
+        OnInteract?.Invoke();
     }
 }

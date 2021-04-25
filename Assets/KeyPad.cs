@@ -23,6 +23,10 @@ public class KeyPad : MonoBehaviour
 
     private void Start()
     {
+        foreach (var v in gameObject.GetComponentsInChildren<KeyPadButton>())
+        {
+            v.keyPress += EnterNumber;
+        }
         for (int i = 0; i < combinationLength; i++)
         {
             correctCombination += Random.Range(0, 9);
@@ -50,7 +54,7 @@ public class KeyPad : MonoBehaviour
         }
     }
 
-    public void EnterNumber(string number)
+    public void EnterNumber(int number)
     {
         inputCombination += number;
     }
