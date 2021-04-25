@@ -5,27 +5,21 @@ using TMPro;
 public class PlayerSideInteractable : MonoBehaviour
 {
     [SerializeField]
-    Transform cameraTransform;
+    private Transform cameraTransform;
     [SerializeField]
-    TextMeshProUGUI interactText;
-    RaycastHit? raycastHit;
-    void Update()
+    private TextMeshProUGUI interactText;
+
+    private void Update()
     {
+
         Ray ray = new Ray(cameraTransform.position, cameraTransform.forward);
         Physics.Raycast(ray, out var hit, 5);
-        raycastHit = hit;
-        Interactable interactable = raycastHit?.collider?.gameObject?.GetComponent<Interactable>();
-        if (interactable != null)
-        {
-            interactText.text = interactable.interactText;
-            if(Input.GetKeyDown(KeyCode.E))
-            {
-                interactable.Hit();
-            }
-        }
-        else
-        {
-            interactText.text = "";
-        }
+
+        Interactable interactable = hit.collider?.gameObject.GetComponent<Interactable>();
+        interactText.text = interactable?.interactText;
+
+        if (!Input.GetKeyDown(KeyCode.E)) return;
+
+        interactable?.Hit();
     }
 }
