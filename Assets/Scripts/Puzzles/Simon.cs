@@ -64,7 +64,7 @@ namespace Puzzles
             ResetState();
             SubscribeToPresses();
         }
-        
+
         /// <summary>
         /// High Level method for playing
         /// internal sounds clips.

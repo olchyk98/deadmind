@@ -474,6 +474,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93944cff33d1bfa489f080407fc1c2e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactText: 
 --- !u!1 &295288879
 GameObject:
   m_ObjectHideFlags: 0
@@ -895,6 +896,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93944cff33d1bfa489f080407fc1c2e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactText: 
 --- !u!1 &342737324
 GameObject:
   m_ObjectHideFlags: 0
@@ -1083,6 +1085,33 @@ MonoBehaviour:
   - {fileID: 70487131}
   - {fileID: 308328324}
   _displayText: {fileID: 38689120}
+  _buttonBlinkSound: {fileID: 0}
+  _puzzleSuccessSound: {fileID: 0}
+  _puzzleFailSound: {fileID: 0}
+--- !u!1 &610326589 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7006171859244352314, guid: 914a3763d300c6b4ea79b5ba3f68a34c, type: 3}
+  m_PrefabInstance: {fileID: 695888940}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &610326590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 610326589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 434655fe858945d4288cdddf83acf99f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraTransform: {fileID: 610326598}
+  interactText: {fileID: 0}
+--- !u!4 &610326598 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7006171859244352307, guid: 914a3763d300c6b4ea79b5ba3f68a34c, type: 3}
+  m_PrefabInstance: {fileID: 695888940}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &686112234
 GameObject:
   m_ObjectHideFlags: 0
@@ -1300,6 +1329,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93944cff33d1bfa489f080407fc1c2e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactText: 
 --- !u!1001 &695888940
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1675,6 +1705,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93944cff33d1bfa489f080407fc1c2e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactText: 
 --- !u!1 &1422287527
 GameObject:
   m_ObjectHideFlags: 0
@@ -1958,3 +1989,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93944cff33d1bfa489f080407fc1c2e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactText: 
