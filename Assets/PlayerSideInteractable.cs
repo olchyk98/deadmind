@@ -4,20 +4,18 @@ using UnityEngine;
 using TMPro;
 public class PlayerSideInteractable : MonoBehaviour
 {
-    [SerializeField] private Transform cameraTransform;
-    [SerializeField] private TextMeshProUGUI interactText;
+    [SerializeField] private Camera _camera;
+    [SerializeField] private TextMeshProUGUI _interactText;
     private void Update()
     {
-        Ray ray = new Ray(cameraTransform.position, cameraTransform.forward);
+        Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
 
-        Physics.Raycast(ray, out var hit, 5);
+        Physics.Raycast(ray, out var hit, 10f);
         Interactable interactable = hit.collider?.gameObject.GetComponent<Interactable>();
-
-        print(interactable);
 
         if (interactable != null)
         {
-            interactText.text = interactable.interactText;
+            _interactText.text = interactable.interactText;
             if(Input.GetKeyDown(KeyCode.E))
             {
                 interactable.Hit();
@@ -26,6 +24,6 @@ public class PlayerSideInteractable : MonoBehaviour
             return;
         }
 
-        interactText.text = "";
+        _interactText.text = "";
     }
 }

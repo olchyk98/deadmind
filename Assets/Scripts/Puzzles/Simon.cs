@@ -60,8 +60,8 @@ namespace Puzzles
         private void Start ()
         {
             _audioSource = GetComponent<AudioSource>();
+            _displayText.text = "";
 
-            ResetState();
             SubscribeToPresses();
         }
 
@@ -198,6 +198,7 @@ namespace Puzzles
         /// </summary>
         private IEnumerator StartPuzzle ()
         {
+            ResetState();
             PlayInternalSound(_buttonBlinkSound);
             StartCoroutine(_buttons[0].Blink());
 
@@ -217,7 +218,7 @@ namespace Puzzles
 
             _displayText.text = "_FAIL";
             yield return new WaitForSeconds(1.5f);
-            ResetState();
+            StartCoroutine(StartPuzzle());
         }
 
         /// <summary>
