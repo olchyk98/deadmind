@@ -1412,13 +1412,8 @@ Transform:
   m_LocalScale: {x: 21.68904, y: 1, z: 40}
   m_Children: []
   m_Father: {fileID: 0}
-<<<<<<< Updated upstream
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
-=======
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
->>>>>>> Stashed changes
 --- !u!1 &1649691423
 GameObject:
   m_ObjectHideFlags: 0
