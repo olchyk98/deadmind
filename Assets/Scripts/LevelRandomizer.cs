@@ -15,6 +15,7 @@ public class LevelRandomizer : MonoBehaviour
     public void RandomizeList()
     {
         Shuffle(ref levelIndexList);
+        StaticManager.levelIndexList = levelIndexList;
     }
 
     public static void Shuffle(ref List<int> list)
