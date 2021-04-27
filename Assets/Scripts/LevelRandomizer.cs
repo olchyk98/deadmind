@@ -8,7 +8,7 @@ public class LevelRandomizer : MonoBehaviour
     private static System.Random rng = new System.Random();
     public List<int> levelIndexList = new List<int>();
 
-    private void Start()
+    private void Awake()
     {
         RandomizeList();
     }
@@ -20,7 +20,7 @@ public class LevelRandomizer : MonoBehaviour
 
     public static void Shuffle(ref List<int> list)
     {
-        int n = list.Count;
+        int n = list.Count -1;
         while (n > 1)
         {
             n--;
@@ -29,5 +29,6 @@ public class LevelRandomizer : MonoBehaviour
             list[k] = list[n];
             list[n] = value;
         }
+        list.Reverse();
     }
 }
