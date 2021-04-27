@@ -7,11 +7,18 @@ public class KeyPadButton : Interactable
 {
     [SerializeField]
     int keyIndex;
-    public UnityAction<int> keyPress;
+    public UnityAction<int> OnKeyPress;
 
-    public override void Hit()
+    private void Start()
     {
-        base.Hit();
-        keyPress?.Invoke(keyIndex);
+        OnInteract += PressKey;
+    }
+    void PressKey()
+    {
+        OnKeyPress?.Invoke(keyIndex);
+    }
+    private void OnDestroy()
+    {
+        OnInteract -= PressKey;
     }
 }
