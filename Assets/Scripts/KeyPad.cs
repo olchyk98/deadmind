@@ -25,7 +25,7 @@ public class KeyPad : MonoBehaviour
     {
         foreach (var v in gameObject.GetComponentsInChildren<KeyPadButton>())
         {
-            v.keyPress += EnterNumber;
+            v.OnKeyPress += EnterNumber;
         }
         for (int i = 0; i < combinationLength; i++)
         {

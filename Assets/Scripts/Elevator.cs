@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Elevator : Interactable
 {
@@ -8,10 +9,10 @@ public class Elevator : Interactable
     private void Awake()
     {
         levelLoader = GetComponent<LevelLoader>();
+        OnInteract += levelLoader.LoadNextLevel;
     }
-    public override void Hit()
+    private void OnDestroy()
     {
-        base.Hit();
-        levelLoader.LoadNextLevel();
+        OnInteract -= levelLoader.LoadNextLevel;
     }
 }

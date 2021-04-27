@@ -14,11 +14,11 @@ public class LevelRandomizer : MonoBehaviour
     }
     public void RandomizeList()
     {
-        Shuffle(ref levelIndexList);
+        Shuffle(levelIndexList);
         StaticManager.levelIndexList = levelIndexList;
     }
 
-    public static void Shuffle(ref List<int> list)
+    public static void Shuffle(List<int> list)
     {
         int n = list.Count -1;
         while (n > 1)

@@ -20,13 +20,13 @@
   {
     "name": "YOURE",
     "mapping": {
-        "RED": "GREEN",
-        "GREEN": "BLUE",
-        "BLUE": "RED",
-        "YELLOW": "YELLOW"
+      "RED": "GREEN",
+      "GREEN": "BLUE",
+      "BLUE": "RED",
+      "YELLOW": "YELLOW"
     }
   },
-  { 
+  {
     "name": "YOURS",
     "mapping": {
       "YELLOW": "RED",
@@ -36,3 +36,4 @@
     }
   }
 ]
+

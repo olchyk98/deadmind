@@ -7,6 +7,7 @@ public class LevelLoader : MonoBehaviour
 {
     public void LoadNextLevel()
     {
+        if (StaticManager.curLevelIndex >= StaticManager.levelIndexList.Count) return;
         SceneManager.LoadScene(StaticManager.levelIndexList[StaticManager.curLevelIndex]);
         StaticManager.curLevelIndex++;
     }

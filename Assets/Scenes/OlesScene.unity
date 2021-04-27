@@ -1105,13 +1105,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 434655fe858945d4288cdddf83acf99f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraTransform: {fileID: 610326598}
+  cameraTransform: {fileID: 2070531885}
   interactText: {fileID: 0}
---- !u!4 &610326598 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7006171859244352307, guid: 914a3763d300c6b4ea79b5ba3f68a34c, type: 3}
-  m_PrefabInstance: {fileID: 695888940}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &686112234
 GameObject:
   m_ObjectHideFlags: 0
@@ -1990,3 +1985,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactText: 
+--- !u!4 &2070531885 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7006171859133870249, guid: 914a3763d300c6b4ea79b5ba3f68a34c, type: 3}
+  m_PrefabInstance: {fileID: 695888940}
+  m_PrefabAsset: {fileID: 0}
