@@ -1282,7 +1282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04134090d1b55eb4c8d7f31df7ada798, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  combinationLength: 10
+  combinationLength: 6
   correctCombination: 
   cipheredCombination: 
   cipherSymbols: 3c003d002d003f002b00240025003e0040002f00
