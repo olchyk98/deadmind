@@ -9,15 +9,6 @@ public class MainMenu : MonoBehaviour {
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-    public void LoadNextLevel()
-    {
-        SceneManager.LoadScene(StaticManager.levelIndexList[StaticManager.curLevelIndex]);
-        StaticManager.curLevelIndex++;
-    }
-    public void ReturnToMainMenu()
-    {
-        SceneManager.LoadScene(0);
-    }
 
     public void QuitGame()
     {

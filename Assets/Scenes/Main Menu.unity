@@ -958,6 +958,7 @@ GameObject:
   - component: {fileID: 656695902}
   - component: {fileID: 656695901}
   - component: {fileID: 656695903}
+  - component: {fileID: 656695904}
   m_Layer: 5
   m_Name: BackGroundImage
   m_TagString: Untagged
@@ -1032,6 +1033,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelIndexList: 07000000020000000300000004000000050000000600000001000000
+--- !u!114 &656695904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 656695899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0a0caa66f7631c45b9b638ff5d90731, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &714998907
 GameObject:
   m_ObjectHideFlags: 0
@@ -1861,8 +1874,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1915470418}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+      - m_Target: {fileID: 656695904}
+        m_TargetAssemblyTypeName: LevelLoader, Assembly-CSharp
         m_MethodName: LoadNextLevel
         m_Mode: 1
         m_Arguments:
@@ -2209,6 +2222,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1293993451}
   - component: {fileID: 1293993450}
+  - component: {fileID: 1293993452}
   m_Layer: 0
   m_Name: StaticManager
   m_TagString: Untagged
@@ -2242,6 +2256,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1293993452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293993449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0a0caa66f7631c45b9b638ff5d90731, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1590549605
 GameObject:
   m_ObjectHideFlags: 0
