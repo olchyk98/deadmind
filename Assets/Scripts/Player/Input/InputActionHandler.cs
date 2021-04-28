@@ -9,7 +9,6 @@ namespace Player
         public UnityAction<Vector3> OnMove;
         public UnityAction<Vector2> OnRotate;
 
-        // Update is called once per frame
         private void FixedUpdate()
         {
             HandleMovementTick();
@@ -32,7 +31,10 @@ namespace Player
                 UInput.GetAxis("Mouse X"),
                 UInput.GetAxis("Mouse Y")
             );
-            OnRotate?.Invoke(direction);
+
+            if(Mathf.Abs(direction.x) > 0f && Mathf.Abs(direction.y) > 0f) {
+                OnRotate?.Invoke(direction);
+            }
         }
     }
 }
