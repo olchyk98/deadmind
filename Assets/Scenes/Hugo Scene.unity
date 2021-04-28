@@ -140,13 +140,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 434655fe858945d4288cdddf83acf99f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraTransform: {fileID: 164741125}
-  interactText: {fileID: 1496033429}
---- !u!4 &164741125 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7006171859133870249, guid: 914a3763d300c6b4ea79b5ba3f68a34c, type: 3}
-  m_PrefabInstance: {fileID: 958256652}
-  m_PrefabAsset: {fileID: 0}
+  _camera: {fileID: 164741128}
+  _interactText: {fileID: 1496033429}
 --- !u!20 &164741128 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 7006171859133870252, guid: 914a3763d300c6b4ea79b5ba3f68a34c, type: 3}
