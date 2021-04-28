@@ -1,4 +1,3 @@
-using Player;
 using System;
 using Player;
 using UnityEngine;
@@ -25,13 +24,16 @@ public class Movement : MonoBehaviour
 
     private void OnMove(Vector3 input)
     {
-        var jumping = input.y;
-        var movement = new Vector3(input.x*movementSpeed*10, rb.velocity.y, input.z*movementSpeed*10);
+        var _transform = transform;
         
-        rb.velocity = movement;
-        if (jumping > 0 && grounded)
+        var forward = _transform.forward * (input.x * movementSpeed * 10);
+        var horizontal = _transform.right * (input.z * movementSpeed * 10);
+
+        rb.velocity = forward + horizontal + _transform.up * rb.velocity.y;
+        
+        if (input.y > 0 && grounded)
         {
-            Jump(jumping);
+            Jump(input.y);
         }
 
     }

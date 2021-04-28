@@ -1,0 +1,39 @@
+[
+  {
+    "name": "LEED0",
+    "mapping": {
+      "RED": "BLUE",
+      "GREEN": "YELLOW",
+      "BLUE": "YELLOW",
+      "YELLOW": "RED"
+    }
+  },
+  {
+    "name": "LEAD0",
+    "mapping": {
+      "RED": "GREEN",
+      "GREEN": "BLUE",
+      "BLUE": "RED",
+      "YELLOW": "YELLOW"
+    }
+  },
+  {
+    "name": "YOURE",
+    "mapping": {
+      "RED": "GREEN",
+      "GREEN": "BLUE",
+      "BLUE": "RED",
+      "YELLOW": "YELLOW"
+    }
+  },
+  {
+    "name": "YOURS",
+    "mapping": {
+      "YELLOW": "RED",
+      "RED": "RED",
+      "BLUE": "YELLOW",
+      "GREEN": "BLUE"
+    }
+  }
+]
+
