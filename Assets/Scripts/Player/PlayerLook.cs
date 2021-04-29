@@ -2,12 +2,14 @@
 
 namespace Player
 {
+    [RequireComponent(typeof(Rigidbody))]
     public class PlayerLook : MonoBehaviour
     {
         [Range(1f, 200f)] [SerializeField] private float _mouseSensitivity;
         [SerializeField] private Transform _cameraTransform;
         private Transform _transform;
         private InputActionHandler _input;
+        private Rigidbody _rigidbody;
 
         private float _rotationY = 0f;
 
@@ -15,6 +17,7 @@ namespace Player
         {
             _transform = GetComponent<Transform>();
             _input = GetComponent<InputActionHandler>();
+            _rigidbody = GetComponent<Rigidbody>();
 
             _input.OnRotate += HandleLookTick;
 
@@ -28,6 +31,8 @@ namespace Player
 
             _rotationY = Mathf.Clamp(nextY, -90f, 90f);
             horizontalRotation.y += direction.x * _mouseSensitivity;
+
+            _rigidbody.angularVelocity = Vector3.zero;
 
             // Apply rotation changes
             _cameraTransform.localRotation = Quaternion.Euler(_rotationY, 0f, 0f);
