@@ -5,22 +5,21 @@ using UnityEngine.Events;
 
 public class Timer : MonoBehaviour
 {
-    public UnityAction TimerStopped;
-    public string timerOutput;
-    public bool started;
+    public UnityAction OnTimerStopped;
+    public UnityAction<string> OnTimerUpdate;
+    public string timerOutput; 
+    public bool HasStarted { get; private set; }
 
     [SerializeField] private float timerStart;
     [SerializeField] private float timerEnd;
     [SerializeField] private bool countsUp;
-    
-    Stopwatch watch = new Stopwatch();
 
-    private float timerSeconds;
-    private string pattern = @"HH\:mm\:ss";
-    
+    private float _timerSeconds;
+    private const string OutputPattern = @"HH\:mm\:ss";
+
     private void Awake()
     {
-        if (started)
+        if (HasStarted)
         {
             ResetTimer();
         }
@@ -28,36 +27,35 @@ public class Timer : MonoBehaviour
 
     private void Update()
     {
-        if (started)
+        if (!HasStarted) return;
+        
+        _timerSeconds += countsUp ? Time.deltaTime : -Time.deltaTime;
+        var t = TimeSpan.FromSeconds(_timerSeconds);
+        timerOutput = t.ToString(OutputPattern);
+        
+        if (countsUp && _timerSeconds > timerEnd 
+            || !countsUp && _timerSeconds < timerEnd)
         {
-            timerSeconds += countsUp ? Time.deltaTime : -Time.deltaTime;
-            if (countsUp && timerSeconds > timerEnd)
-            {
-                StopTimer();
-            }else if (!countsUp && timerSeconds < timerEnd)
-            {
-                StopTimer();
-            }
-
-            TimeSpan t = TimeSpan.FromSeconds(timerSeconds);
-            timerOutput = string.Format(pattern, t);
+            StopTimer();
         }
-    }
-
-    public void ResetTimer()
-    {
-        timerSeconds = timerStart;
+        
+        OnTimerUpdate?.Invoke(timerOutput);
     }
 
     public void StartTimer()
     {
-        started = true;
-        
+        ResetTimer();
+        HasStarted = true;
     }
 
     public void StopTimer()
     {
-        started = false;
-        TimerStopped.Invoke();
+        HasStarted = false;
+        OnTimerStopped?.Invoke();
+    }
+    
+    private void ResetTimer()
+    {
+        _timerSeconds = timerStart;
     }
 }
