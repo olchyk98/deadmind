@@ -7,57 +7,57 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class Movement : MonoBehaviour
 {
-    private Rigidbody rb;
-    private bool grounded;
+    private Rigidbody _rb;
+    private bool _isGrounded;
 
-    [SerializeField] [Range(1f, 20f)] private float movementSpeed;
-    [SerializeField] [Range(1f, 20f)] private float jumpHeight;
-    [SerializeField] private string groundTag;
+    [SerializeField] [Range(1f, 20f)] private float _movementSpeed;
+    [SerializeField] [Range(1f, 20f)] private float _jumpHeight;
+    [SerializeField] private string _groundTag;
+
+    private Transform _transform;
 
     private void Start()
     {
         var input = GetComponent<InputActionHandler>();
         input.OnMove += OnMove;
 
-        rb = GetComponent<Rigidbody>();
+        _rb = GetComponent<Rigidbody>();
+        _transform = GetComponent<Transform>();
     }
 
     private void OnMove(Vector3 input)
     {
-        var _transform = transform;
-        
-        var forward = _transform.forward * (input.x * movementSpeed * 10);
-        var horizontal = _transform.right * (input.z * movementSpeed * 10);
+        const float extraForce = 10f;
 
-        rb.velocity = forward + horizontal + _transform.up * rb.velocity.y;
-        
-        if (input.y > 0 && grounded)
+        var vertical = _transform.forward * (input.x * _movementSpeed * extraForce);
+        var horizontal = _transform.right * (input.z * _movementSpeed * extraForce);
+
+        _rb.velocity = vertical + horizontal + _transform.up * _rb.velocity.y;
+
+        if (input.y > 0 && _isGrounded)
         {
             Jump(input.y);
         }
-
     }
 
     private void Jump(float input)
     {
-        rb.AddForce(Vector3.up * (jumpHeight * input), ForceMode.Impulse);
+        _rb.AddForce(Vector3.up * (_jumpHeight * input), ForceMode.Impulse);
     }
-
-   
 
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag(groundTag))
+        if (other.gameObject.CompareTag(_groundTag))
         {
-            grounded = true;
+            _isGrounded = true;
         }
     }
 
     private void OnCollisionExit(Collision other)
     {
-        if (other.gameObject.CompareTag(groundTag))
+        if (other.gameObject.CompareTag(_groundTag))
         {
-            grounded = false;
+            _isGrounded = false;
         }
     }
 }
