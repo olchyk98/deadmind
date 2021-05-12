@@ -8,7 +8,8 @@ public class Interactable : MonoBehaviour
 {
     public string interactText;
     public UnityAction OnInteract;
-    public void Hit()
+    public bool CanInteract = true;
+    public virtual void Hit()
     {
         OnInteract?.Invoke();
     }

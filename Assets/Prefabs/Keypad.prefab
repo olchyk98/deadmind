@@ -1,5 +1,113 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!65 &3859937917977481908
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1523926871107663252}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0024086111, y: 0.0030967847, z: 0.01714688}
+  m_Center: {x: 0.006666668, y: 0.0057142875, z: 0.0191553}
+--- !u!114 &3336067552398393192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1523926871107663252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8afdb091531f3d41b52a3dc06e28154, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactText: '[E] Press Key 3'
+  keyIndex: 3
+--- !u!65 &3859937918072288622
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1929931333720592417}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0024086107, y: 0.0030967847, z: 0.01714688}
+  m_Center: {x: 0.0022222227, y: -0.0057142875, z: 0.0191553}
+--- !u!114 &7363982101955216534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1929931333720592417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8afdb091531f3d41b52a3dc06e28154, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactText: '[E] Press Key 4'
+  keyIndex: 4
+--- !u!65 &3859937916409259764
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2577917386945239198}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0024086104, y: 0.0030967847, z: 0.01714688}
+  m_Center: {x: -0.0022222227, y: 3.1579678e-17, z: 0.0191553}
+--- !u!114 &8741091671070856423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2577917386945239198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8afdb091531f3d41b52a3dc06e28154, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactText: '[E] Press Key 8'
+  keyIndex: 8
+--- !u!65 &3859937916814009111
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3635082987142550494}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0024086107, y: 0.0030967847, z: 0.01714688}
+  m_Center: {x: 0.0022222227, y: 0.0057142875, z: 0.0191553}
+--- !u!114 &3264546228166068980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3635082987142550494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8afdb091531f3d41b52a3dc06e28154, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactText: '[E] Press Key 6'
+  keyIndex: 6
 --- !u!1 &3842088326522920110
 GameObject:
   m_ObjectHideFlags: 0
@@ -174,9 +282,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3842088327556395850}
-  - component: {fileID: 3859937917406551110}
+  - component: {fileID: 3931942666754412905}
   m_Layer: 0
-  m_Name: Keypad 1
+  m_Name: Keypad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -198,7 +306,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &3859937917406551110
+--- !u!114 &3931942666754412905
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -207,13 +315,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 3842088327556395849}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04134090d1b55eb4c8d7f31df7ada798, type: 3}
+  m_Script: {fileID: 11500000, guid: bd2552129fbd61742b493feda23c0640, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   combinationLength: 6
   correctCombination: 
   cipheredCombination: 
-  cipherSymbols: 3c003d002d003f002b00240025003e0040002f00
+  cipherSymbols: 3c003e002b00240026003d0025002a0023002d00
   inputCombination: 
   unlockEvent:
     m_PersistentCalls:
@@ -318,246 +426,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!65 &3859937916250092076
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9145025126876248883}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.0024086111, y: 0.0030967847, z: 0.01714688}
-  m_Center: {x: 0.006666668, y: -9.4739034e-17, z: 0.0191553}
---- !u!114 &3859937916250092077
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9145025126876248883}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93944cff33d1bfa489f080407fc1c2e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnPress:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3859937917406551110}
-        m_TargetAssemblyTypeName: KeyPad, Assembly-CSharp
-        m_MethodName: EnterNumber
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 2
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!65 &3859937916409259764
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2577917386945239198}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.0024086104, y: 0.0030967847, z: 0.01714688}
-  m_Center: {x: -0.0022222227, y: 3.1579678e-17, z: 0.0191553}
---- !u!114 &3859937916409259765
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2577917386945239198}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93944cff33d1bfa489f080407fc1c2e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnPress:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3859937917406551110}
-        m_TargetAssemblyTypeName: KeyPad, Assembly-CSharp
-        m_MethodName: EnterNumber
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 8
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!65 &3859937916524003409
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6608963395640973264}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.0024086107, y: 0.0030967847, z: 0.01714688}
-  m_Center: {x: 0.0022222227, y: -3.1579678e-17, z: 0.0191553}
---- !u!114 &3859937916524003410
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6608963395640973264}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93944cff33d1bfa489f080407fc1c2e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnPress:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3859937917406551110}
-        m_TargetAssemblyTypeName: KeyPad, Assembly-CSharp
-        m_MethodName: EnterNumber
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 5
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!65 &3859937916814009111
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3635082987142550494}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.0024086107, y: 0.0030967847, z: 0.01714688}
-  m_Center: {x: 0.0022222227, y: 0.0057142875, z: 0.0191553}
---- !u!114 &3859937916814009104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3635082987142550494}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93944cff33d1bfa489f080407fc1c2e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnPress:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3859937917406551110}
-        m_TargetAssemblyTypeName: KeyPad, Assembly-CSharp
-        m_MethodName: EnterNumber
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 6
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!65 &3859937916978265730
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7862419408448584628}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.0024086111, y: 0.0030967847, z: 0.01714688}
-  m_Center: {x: -0.006666668, y: 9.4739034e-17, z: 0.0191553}
---- !u!114 &3859937916978265731
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7862419408448584628}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93944cff33d1bfa489f080407fc1c2e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnPress:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3859937917406551110}
-        m_TargetAssemblyTypeName: KeyPad, Assembly-CSharp
-        m_MethodName: EnterNumber
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 0
-          m_BoolArgument: 0
-        m_CallState: 1
---- !u!65 &3859937917159569297
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9171269610018912013}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.0024086104, y: 0.0030967847, z: 0.01714688}
-  m_Center: {x: -0.0022222227, y: -0.0057142875, z: 0.0191553}
---- !u!114 &3859937917159569298
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9171269610018912013}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93944cff33d1bfa489f080407fc1c2e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnPress:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3859937917406551110}
-        m_TargetAssemblyTypeName: KeyPad, Assembly-CSharp
-        m_MethodName: EnterNumber
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 7
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!65 &3859937917809655147
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -571,7 +439,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.0024086111, y: 0.0030967847, z: 0.01714688}
   m_Center: {x: 0.006666668, y: -0.0057142875, z: 0.0191553}
---- !u!114 &3859937917809655140
+--- !u!114 &1564936104979268027
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -580,64 +448,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6283462109987798290}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93944cff33d1bfa489f080407fc1c2e1, type: 3}
+  m_Script: {fileID: 11500000, guid: d8afdb091531f3d41b52a3dc06e28154, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnPress:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3859937917406551110}
-        m_TargetAssemblyTypeName: KeyPad, Assembly-CSharp
-        m_MethodName: EnterNumber
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 1
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!65 &3859937917977481908
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1523926871107663252}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.0024086111, y: 0.0030967847, z: 0.01714688}
-  m_Center: {x: 0.006666668, y: 0.0057142875, z: 0.0191553}
---- !u!114 &3859937917977481909
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1523926871107663252}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93944cff33d1bfa489f080407fc1c2e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnPress:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3859937917406551110}
-        m_TargetAssemblyTypeName: KeyPad, Assembly-CSharp
-        m_MethodName: EnterNumber
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 3
-          m_BoolArgument: 0
-        m_CallState: 2
+  interactText: '[E] Press Key 1'
+  keyIndex: 1
 --- !u!65 &3859937917994744242
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -651,7 +466,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.0024086104, y: 0.0030967847, z: 0.01714688}
   m_Center: {x: -0.0022222227, y: 0.0057142875, z: 0.0191553}
---- !u!114 &3859937917994744243
+--- !u!114 &643408243154571559
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -660,64 +475,119 @@ MonoBehaviour:
   m_GameObject: {fileID: 6331648647796062195}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93944cff33d1bfa489f080407fc1c2e1, type: 3}
+  m_Script: {fileID: 11500000, guid: d8afdb091531f3d41b52a3dc06e28154, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnPress:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3859937917406551110}
-        m_TargetAssemblyTypeName: KeyPad, Assembly-CSharp
-        m_MethodName: EnterNumber
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 9
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!65 &3859937918072288622
+  interactText: '[E] Press Key 9'
+  keyIndex: 9
+--- !u!65 &3859937916524003409
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1929931333720592417}
+  m_GameObject: {fileID: 6608963395640973264}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.0024086107, y: 0.0030967847, z: 0.01714688}
-  m_Center: {x: 0.0022222227, y: -0.0057142875, z: 0.0191553}
---- !u!114 &3859937918072288623
+  m_Center: {x: 0.0022222227, y: -3.1579678e-17, z: 0.0191553}
+--- !u!114 &7628233238480985370
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1929931333720592417}
+  m_GameObject: {fileID: 6608963395640973264}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93944cff33d1bfa489f080407fc1c2e1, type: 3}
+  m_Script: {fileID: 11500000, guid: d8afdb091531f3d41b52a3dc06e28154, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnPress:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3859937917406551110}
-        m_TargetAssemblyTypeName: KeyPad, Assembly-CSharp
-        m_MethodName: EnterNumber
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 4
-          m_BoolArgument: 0
-        m_CallState: 2
+  interactText: '[E] Press Key 5'
+  keyIndex: 5
+--- !u!65 &3859937916978265730
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7862419408448584628}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0024086111, y: 0.0030967847, z: 0.01714688}
+  m_Center: {x: -0.006666668, y: 9.4739034e-17, z: 0.0191553}
+--- !u!114 &3846843613519929022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7862419408448584628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8afdb091531f3d41b52a3dc06e28154, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactText: '[E] Press Key 0'
+  keyIndex: 0
+--- !u!65 &3859937916250092076
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9145025126876248883}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0024086111, y: 0.0030967847, z: 0.01714688}
+  m_Center: {x: 0.006666668, y: -9.4739034e-17, z: 0.0191553}
+--- !u!114 &4135435705167416673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9145025126876248883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8afdb091531f3d41b52a3dc06e28154, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactText: '[E] Press Key 2'
+  keyIndex: 2
+--- !u!65 &3859937917159569297
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9171269610018912013}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0024086104, y: 0.0030967847, z: 0.01714688}
+  m_Center: {x: -0.0022222227, y: -0.0057142875, z: 0.0191553}
+--- !u!114 &293287351104978591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9171269610018912013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8afdb091531f3d41b52a3dc06e28154, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactText: '[E] Press Key 7'
+  keyIndex: 7
 --- !u!1001 &3842088328468542109
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -840,6 +710,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ca108a94ba7333d47bcf14dd9a203d45, type: 3}
   m_PrefabInstance: {fileID: 3842088328468542109}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7862419408448584628 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -2860566202059830999, guid: ca108a94ba7333d47bcf14dd9a203d45, type: 3}
+  m_PrefabInstance: {fileID: 3842088328468542109}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3635082987142550494 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 514464024125514051, guid: ca108a94ba7333d47bcf14dd9a203d45, type: 3}
@@ -855,14 +730,14 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -7595517798837245437, guid: ca108a94ba7333d47bcf14dd9a203d45, type: 3}
   m_PrefabInstance: {fileID: 3842088328468542109}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &6608963395640973264 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7991100750345790797, guid: ca108a94ba7333d47bcf14dd9a203d45, type: 3}
-  m_PrefabInstance: {fileID: 3842088328468542109}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6331648647796062195 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7101998613625947502, guid: ca108a94ba7333d47bcf14dd9a203d45, type: 3}
+  m_PrefabInstance: {fileID: 3842088328468542109}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6608963395640973264 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7991100750345790797, guid: ca108a94ba7333d47bcf14dd9a203d45, type: 3}
   m_PrefabInstance: {fileID: 3842088328468542109}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1929931333720592417 stripped
@@ -883,10 +758,5 @@ GameObject:
 --- !u!1 &6283462109987798290 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7089371171924758415, guid: ca108a94ba7333d47bcf14dd9a203d45, type: 3}
-  m_PrefabInstance: {fileID: 3842088328468542109}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &7862419408448584628 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -2860566202059830999, guid: ca108a94ba7333d47bcf14dd9a203d45, type: 3}
   m_PrefabInstance: {fileID: 3842088328468542109}
   m_PrefabAsset: {fileID: 0}
