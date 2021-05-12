@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -12,6 +13,13 @@ public class PaintingManager : Interactable
     public List<Material> fakePaintings;
     public Material realPainting;
     private int correctPaintingIndex;
+    private Animation _animation;
+    private AudioSource _audioSource;
+    [SerializeField]
+    private AudioClip buttonPressSound;
+    [SerializeField]
+    private AudioClip[] outcomeSounds;
+
     private void Start()
     {
         OnInteract += GuessPainting;
@@ -22,11 +30,21 @@ public class PaintingManager : Interactable
         }
         correctPaintingIndex = rNG.Next(0, _paintings.Length);
         _paintings[correctPaintingIndex].paintingRenderer.material = realPainting;
+        _animation = GetComponentInChildren<Animation>();
+        _audioSource = GetComponentInChildren<AudioSource>();
     }
     private void GuessPainting()
     {
-        if(selectedPainting == _paintings[correctPaintingIndex])
+        if (selectedPainting == null) return;
+
+        _animation.Play();
+        _audioSource.clip = buttonPressSound;
+        _audioSource.Play();
+
+        if (selectedPainting == _paintings[correctPaintingIndex])
         {
+            _audioSource.clip = outcomeSounds[0];
+            _audioSource.Play();
             selectedPainting.light.color = Color.green;
             CompleteEvent.Invoke();
             CanInteract = false;
@@ -37,7 +55,9 @@ public class PaintingManager : Interactable
         }
         else
         {
-            selectedPainting.light.color = Color.red;
+            _audioSource.clip = outcomeSounds[1];
+            _audioSource.Play();
+            selectedPainting.light.color= Color.red;
             StartCoroutine(wrongPaintingCooldown());
         }
     }
