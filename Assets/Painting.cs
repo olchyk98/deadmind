@@ -8,7 +8,7 @@ public class Painting : Interactable
     private PaintingManager paintingManager;
     public Light light;
     public MeshRenderer paintingRenderer;
-    private void Start()
+    private void Awake()
     {
         paintingRenderer = GetComponentInChildren<MeshRenderer>();
         light = GetComponentInChildren<Light>();

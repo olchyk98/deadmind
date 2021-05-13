@@ -19,6 +19,8 @@ public class Door : Interactable
     public void ToggleState()
     {
         _animator.SetBool("isOpen", !_animator.GetBool("isOpen"));
+        if (_animator.GetBool("isOpen")) interactText = "[E] to Close";
+        else interactText = "[E] to Open";
         _audioSource.clip = _audioClips[Convert.ToInt32(_animator.GetBool("isOpen"))];
         _audioSource.Play();
     }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -9,9 +10,15 @@ public class PaintingManager : Interactable
     public Painting selectedPainting;
     public UnityEvent CompleteEvent;
     System.Random rNG = new System.Random();
+    [SerializeField]
     private Painting[] _paintings;
     public List<Material> fakePaintings;
-    public Material realPainting;
+
+    private TextMeshProUGUI ownedByText;
+    public List<Material> realPaintings;
+    [SerializeField]
+    private List<string> realPaintingOwners;
+
     private int correctPaintingIndex;
     private Animation _animation;
     private AudioSource _audioSource;
@@ -24,12 +31,17 @@ public class PaintingManager : Interactable
     {
         OnInteract += GuessPainting;
         _paintings = GetComponentsInChildren<Painting>();
+        ownedByText = GetComponentInChildren<TextMeshProUGUI>();
         foreach (Painting painting in _paintings)
         {
             painting.paintingRenderer.material = fakePaintings[rNG.Next(0, fakePaintings.Count)];
         }
         correctPaintingIndex = rNG.Next(0, _paintings.Length);
-        _paintings[correctPaintingIndex].paintingRenderer.material = realPainting;
+
+        int randomPaintingIndex = rNG.Next(realPaintings.Count);
+
+        _paintings[correctPaintingIndex].paintingRenderer.material = realPaintings[randomPaintingIndex];
+        ownedByText.text = realPaintingOwners[randomPaintingIndex];
         _animation = GetComponentInChildren<Animation>();
         _audioSource = GetComponentInChildren<AudioSource>();
     }
