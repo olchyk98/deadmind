@@ -1,19 +1,28 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Animations;
 using UnityEngine;
 
 public class Door : Interactable
 {
-    Animator animator;
+    private Animator _animator;
+    [SerializeField]
+    private AudioClip[] _audioClips = new AudioClip[2];
+    private AudioSource _audioSource;
     private void Start()
     {
         OnInteract += ToggleState;
-        animator = GetComponent<Animator>();
+        _animator = GetComponent<Animator>();
+        _audioSource = GetComponent<AudioSource>();
     }
     public void ToggleState()
     {
-        animator.SetBool("isOpen", !animator.GetBool("isOpen"));
+        _animator.SetBool("isOpen", !_animator.GetBool("isOpen"));
+        if (_animator.GetBool("isOpen")) interactText = "[E] to Close";
+        else interactText = "[E] to Open";
+        _audioSource.clip = _audioClips[Convert.ToInt32(_animator.GetBool("isOpen"))];
+        _audioSource.Play();
     }
     private void OnDestroy()
     {

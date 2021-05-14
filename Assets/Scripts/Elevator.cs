@@ -5,14 +5,14 @@ using UnityEngine.Events;
 
 public class Elevator : Interactable
 {
-    LevelLoader levelLoader;
+    private LevelLoader _levelLoader;
     private void Awake()
     {
-        levelLoader = GetComponent<LevelLoader>();
-        OnInteract += levelLoader.LoadNextLevel;
+        _levelLoader = GetComponent<LevelLoader>();
+        OnInteract += _levelLoader.LoadNextLevel;
     }
     private void OnDestroy()
     {
-        OnInteract -= levelLoader.LoadNextLevel;
+        OnInteract -= _levelLoader.LoadNextLevel;
     }
 }
