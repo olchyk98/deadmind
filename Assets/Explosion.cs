@@ -15,6 +15,7 @@ public class Explosion : MonoBehaviour
         _audioSource = GetComponent<AudioSource>();
         fadeObjectAnim = GameObject.FindGameObjectWithTag("FadeObject").GetComponent<Animation>();
         deathMenu = GameObject.FindGameObjectWithTag("DeathMenu");
+        deathMenu.SetActive(false);
         SceneManager.sceneLoaded += FindObjectsOnSceneLoad;
         _timer.OnTimerStopped += Explode;
     }
@@ -22,11 +23,13 @@ public class Explosion : MonoBehaviour
     {
         fadeObjectAnim = GameObject.FindGameObjectWithTag("FadeObject").GetComponent<Animation>();
         deathMenu = GameObject.FindGameObjectWithTag("DeathMenu");
+        deathMenu.SetActive(false);
     }
     private void Explode()
     {
         _audioSource.Play();
         fadeObjectAnim.Play();
         deathMenu.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
     }
 }
