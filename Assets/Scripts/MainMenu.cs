@@ -11,8 +11,8 @@ public class MainMenu : MonoBehaviour {
     }
     public void ReturnToMainMenu()
     {
+        StaticManager.DeleteObject();
         SceneManager.LoadScene(0);
-        StaticManager.ReturnObjectToMenu();
     }
 
     public void QuitGame()

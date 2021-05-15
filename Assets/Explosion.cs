@@ -6,7 +6,9 @@ using UnityEngine.SceneManagement;
 public class Explosion : MonoBehaviour
 {
     private TimerUtil _timer;
+    [SerializeField]
     private Animation fadeObjectAnim;
+    [SerializeField]
     private GameObject deathMenu;
     private AudioSource _audioSource;
     private void Start()
@@ -16,14 +18,7 @@ public class Explosion : MonoBehaviour
         fadeObjectAnim = GameObject.FindGameObjectWithTag("FadeObject").GetComponent<Animation>();
         deathMenu = GameObject.FindGameObjectWithTag("DeathMenu");
         deathMenu.SetActive(false);
-        SceneManager.sceneLoaded += FindObjectsOnSceneLoad;
         _timer.OnTimerStopped += Explode;
-    }
-    private void FindObjectsOnSceneLoad(Scene scene, LoadSceneMode mode)
-    {
-        fadeObjectAnim = GameObject.FindGameObjectWithTag("FadeObject").GetComponent<Animation>();
-        deathMenu = GameObject.FindGameObjectWithTag("DeathMenu");
-        deathMenu.SetActive(false);
     }
     private void Explode()
     {
@@ -31,5 +26,6 @@ public class Explosion : MonoBehaviour
         fadeObjectAnim.Play();
         deathMenu.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
+        Destroy(_timer.gameObject,3);
     }
 }
