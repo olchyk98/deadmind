@@ -1,9 +1,11 @@
 using System;
 using System.Diagnostics;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
-public class Timer : MonoBehaviour
+public class TimerUtil : MonoBehaviour
 {
     public UnityAction OnTimerStopped;
     public UnityAction<string> OnTimerUpdate;
@@ -14,15 +16,18 @@ public class Timer : MonoBehaviour
     [SerializeField] private float timerEnd;
     [SerializeField] private bool countsUp;
 
+    [SerializeField]private TextMeshProUGUI timerText;
     private float _timerSeconds;
-    private const string OutputPattern = @"HH\:mm\:ss";
+    private const string OutputPattern = @"mm\:ss";
 
     private void Awake()
     {
-        if (HasStarted)
-        {
-            ResetTimer();
-        }
+        SceneManager.sceneLoaded += FindTimerText;
+        DontDestroyOnLoad(this);
+    }
+    private void FindTimerText(Scene scene, LoadSceneMode mode)
+    {
+        timerText = GameObject.FindWithTag("TimerText").GetComponent<TextMeshProUGUI>();
     }
 
     private void Update()
@@ -32,6 +37,7 @@ public class Timer : MonoBehaviour
         _timerSeconds += countsUp ? Time.deltaTime : -Time.deltaTime;
         var t = TimeSpan.FromSeconds(_timerSeconds);
         timerOutput = t.ToString(OutputPattern);
+        timerText.text = timerOutput;
         
         if (countsUp && _timerSeconds > timerEnd 
             || !countsUp && _timerSeconds < timerEnd)

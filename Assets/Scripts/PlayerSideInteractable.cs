@@ -12,15 +12,15 @@ public class PlayerSideInteractable : MonoBehaviour
 
         Physics.Raycast(ray, out var hit, 10f);
         Interactable interactable = hit.collider?.gameObject.GetComponent<Interactable>();
+        _interactText.text = interactable?.interactText;
 
-        if (interactable != null)
+        if (interactable != null && interactable.CanInteract)
         {
             _interactText.text = interactable.interactText;
             if(Input.GetKeyDown(KeyCode.E))
             {
                 interactable.Hit();
             }
-
             return;
         }
 
