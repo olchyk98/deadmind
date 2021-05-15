@@ -23,6 +23,7 @@ public class TimerUtil : MonoBehaviour
     private void Awake()
     {
         SceneManager.sceneLoaded += FindTimerText;
+        FindTimerText(SceneManager.GetActiveScene(), LoadSceneMode.Additive);
         DontDestroyOnLoad(this);
     }
     private void FindTimerText(Scene scene, LoadSceneMode mode)

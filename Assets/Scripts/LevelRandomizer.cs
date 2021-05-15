@@ -7,6 +7,8 @@ public class LevelRandomizer : MonoBehaviour
 {
     private static System.Random rng = new System.Random();
     public List<int> levelIndexList = new List<int>();
+    [SerializeField]
+    private int creditLevelIndex;
 
     private void Awake()
     {
@@ -15,6 +17,7 @@ public class LevelRandomizer : MonoBehaviour
     public void RandomizeList()
     {
         Shuffle(levelIndexList);
+        levelIndexList.Add(creditLevelIndex);
         StaticManager.levelIndexList = levelIndexList;
     }
 

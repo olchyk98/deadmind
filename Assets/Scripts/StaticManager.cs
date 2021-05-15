@@ -13,9 +13,8 @@ public class StaticManager : MonoBehaviour
         gameObject = GetComponent<GameObject>();
         DontDestroyOnLoad(this);
     }
-    public static void ReturnObjectToMenu()
+    public static void DeleteObject()
     {
-        //SceneManager.MoveGameObjectToScene(gameObject, SceneManager.GetSceneByBuildIndex(0));
         Destroy(gameObject);
     }
 }
