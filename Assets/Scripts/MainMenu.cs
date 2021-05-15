@@ -8,11 +8,13 @@ public class MainMenu : MonoBehaviour {
     public void PlayGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        Time.timeScale = 1;
     }
     public void ReturnToMainMenu()
     {
-        StaticManager.DeleteObject();
         SceneManager.LoadScene(0);
+        StaticManager.DeleteObject();
+        Time.timeScale = 1;
     }
 
     public void QuitGame()

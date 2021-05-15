@@ -10,7 +10,7 @@ public class PlayerSideInteractable : MonoBehaviour
     {
         Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
 
-        Physics.Raycast(ray, out var hit, 10f);
+        Physics.Raycast(ray, out var hit, 5f);
         Interactable interactable = hit.collider?.gameObject.GetComponent<Interactable>();
         _interactText.text = interactable?.interactText;
 

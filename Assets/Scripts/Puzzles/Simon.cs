@@ -55,7 +55,7 @@ namespace Puzzles
         private IList<ButtonColor> _buffer;
         private IList<ButtonColor> _inputBuffer;
 
-        public UnityAction OnSolve;
+        public UnityEvent OnSolve;
 
         private void Start ()
         {

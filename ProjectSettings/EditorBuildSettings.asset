@@ -8,13 +8,22 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/samplescene.unity
     guid: cbfe36cfddfde964d9dfce63a355d5dd
+  - enabled: 0
+    path: Assets/Scenes/start room.unity
+    guid: 354e02f7db785174eb9f1fcffe724d77
   - enabled: 1
     path: Assets/Scenes/Main Menu.unity
     guid: 53c3a7618e8e7d141a91e0213c128416
   - enabled: 1
-    path: Assets/Scenes/Hugo Scene.unity
-    guid: 9777809913e891545a2c61853f202bcb
+    path: Assets/Scenes/Level 1.unity
+    guid: 584eb6af741d703429f79ae6dae77232
   - enabled: 1
-    path: Assets/Scenes/start room.unity
-    guid: 354e02f7db785174eb9f1fcffe724d77
+    path: Assets/Scenes/Level 2.unity
+    guid: 7aec56f588031344da0f8e64b8167b78
+  - enabled: 1
+    path: Assets/Scenes/Level 3.unity
+    guid: 49635a87bf7872d46bc14ef152ec48f0
+  - enabled: 1
+    path: Assets/Scenes/CreditsScene.unity
+    guid: 5d113f127265a9f4ead4dc448b9ae82b
   m_configObjects: {}
